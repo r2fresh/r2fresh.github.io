@@ -1,10 +1,10 @@
 ---
-title: "python manage.py migrate시 Error"
+title: Django Error List
 date: 2019-07-28 11:37:28 -0400
 categories: jekyll update
 ---
 
-## python manage.py migrate
+## Django Error 1
 
 python을 Migrate를 하라고 할때 실행을 하면 아래와 같이 에러가 발생 할 경우가 있다.
 
@@ -41,3 +41,36 @@ AttributeError: module 'django.db.models' has no attribute 'DateTileField'
 ```
 
 해결 방법은 맨 아래에서 보여주는 models.py의 팡리에서 DateTileField 부분을 DateTimeField로 변경하면 migrate도 문제없이 된다.
+
+## Django Error 2
+
+Django에서 `python manage.py migrate`로 실행 시 아래와 같이 에러 발생
+
+```
+$> python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+  Your models have changes that are not yet reflected in a migration, and so won't be applied.
+  Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
+```
+
+먼저 `python manage.py makemigrations`를 입력
+
+```
+$> python manage.py makemigrations
+Migrations for 'articles':
+  articles/migrations/0001_initial.py
+    - Create model Article
+```
+
+다시 `python manage.py migrate`을 실행
+
+```
+$> python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, articles, auth, contenttypes, sessions
+Running migrations:
+  Applying articles.0001_initial... OK
+```
