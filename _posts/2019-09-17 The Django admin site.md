@@ -136,3 +136,5 @@ class BookInline(admin.TabularInline):
 인라인에서 인라인 객체를 삭제할 수 있는지 여부를 지정합니다. 기본값은 True입니다.
 
 **InlineModelAdmin.show_change_link**
+
+관리자에서 변경할 수있는 인라인 오브젝트에 변경 양식에 대한 링크가 있는지 여부를 지정합니다. 기본값은 False입니다.
