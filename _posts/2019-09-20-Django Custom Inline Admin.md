@@ -204,7 +204,8 @@ class ModuleAdmin(admin.ModelAdmin):
     change_form_template = "modules/change_form.html"
 ```
 
-```python
+``` python
+{% \raw %}
 # change_form.html template 부분 생성 및 수정
 {% extends "admin/change_form.html" %}
 {% load i18n admin_urls static admin_modify %}
@@ -218,5 +219,5 @@ class ModuleAdmin(admin.ModelAdmin):
     {% endif %}
 {% endfor %}
 {% endblock %}
-
+{% \endraw %}
 ```
