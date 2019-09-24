@@ -1,3 +1,8 @@
+---
+title: Django Custom Inline Admin
+date: 2019-09-20 11:37:28 -0400
+categories: jekyll update
+---
 ## admin.TabularInline 에서 Model Data List에서 특정 객체만 보이는 방법
 
 **변경 전 소스 코드**
