@@ -31,7 +31,7 @@ class ModuleVersionInline(admin.TabularInline):
 
 ## "created_at", "updated_at"과 fieldsets에 추가 방법
 
-`created_at`과 `updated_at`과 같이 auto로 입력 되는 부분을 fieldsets에 추가하기 위해서는 readonly_fields 리스트에 추가 해야 한다. 아래의 소스코드와 같이 변경 하면 된다.
+"created_at"과 "updated_at"과 같이 auto로 입력 되는 부분을 fieldsets에 추가하기 위해서는 readonly_fields 리스트에 추가 해야 한다. 아래의 소스코드와 같이 변경 하면 된다.
 
 ``` python
 class ModuleVersionInline(admin.TabularInline):
@@ -204,7 +204,7 @@ class ModuleAdmin(admin.ModelAdmin):
     change_form_template = "modules/change_form.html"
 ```
 
-``` python
+```python
 # change_form.html template 부분 생성 및 수정
 {% extends "admin/change_form.html" %}
 {% load i18n admin_urls static admin_modify %}
