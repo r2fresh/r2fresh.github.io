@@ -1,18 +1,6 @@
 ## Markdown에서 Django 템플릿을 사용시 발생하는 에러 해결 방법
 
-아래와 같은 템플릿을 markdown의 코드를 넣는 곳에 넣으면 다음과 같은 에러가 발생한다.
-
-``` python
-{% extends "admin/change_form.html" %}
-{% load i18n admin_urls static admin_modify %}
-{% block inline_field_sets %}
-
-...
-
-{% endblock %}
-```
-
-에러 내용
+jekyll로 만들어진 블로그를 작성 시 markdown에 django template를 넣을때 아래와 같이 에러가 발생하는 경우가 있다.
 
 ```
 The page build failed for the `master` branch with the following error:
