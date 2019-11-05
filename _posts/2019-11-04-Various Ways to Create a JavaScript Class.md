@@ -17,3 +17,7 @@ categories: jekyll update
 ## A guide to prototype-based class inheritance in JavaScript
 
 [https://www.freecodecamp.org/news/a-guide-to-prototype-based-class-inheritance-in-javascript-84953db26df0/](https://www.freecodecamp.org/news/a-guide-to-prototype-based-class-inheritance-in-javascript-84953db26df0/)
+
+## 프로토타입을 사용하여 상속하기
+
+[https://evan-moon.github.io/2019/10/27/inheritance-with-prototype/](https://evan-moon.github.io/2019/10/27/inheritance-with-prototype/)
