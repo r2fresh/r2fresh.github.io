@@ -1,6 +1,6 @@
 ---
-title: 'JavaScript Promise'
-date: 2019-11-04 11:37:28 -0400
+title: JavaScript Promise
+date: 2019-11-18 11:37:28 -0400
 categories: jekyll update
 ---
 
