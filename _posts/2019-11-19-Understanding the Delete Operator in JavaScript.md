@@ -4,6 +4,8 @@ date: 2019-11-19 15:42:28 -0400
 categories: jekyll update
 ---
 
+> 원본 : [https://blog.bitsrc.io/understanding-the-delete-operator-in-javascript-3791ba6f3a08](https://blog.bitsrc.io/understanding-the-delete-operator-in-javascript-3791ba6f3a08)
+
 ## The delete operator
 
 ECMA 스펙에 따라서 
