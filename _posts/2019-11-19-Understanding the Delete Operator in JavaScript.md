@@ -260,3 +260,131 @@ l(delete obj.f)
 ``` javascript
 true
 ```
+
+## delete and the prototype chain
+
+객체에서 삭제가 되어도 프로토타입 체인 에서는 삭제가 되지 않습니다.
+
+``` javascript
+function Foo() {
+    this.bar = 90
+}
+Foo.prototype.bar = 88
+var f = new Foo()
+```
+
+Foo 자신의 property에서 bar가 있고, prototype의 property에도 같이 이름의 bar가 있습니다.
+
+Foo가 인스턴스로 선언되고, 객체를 통해 참조하면 자신의 property의 값이 반환됩니다.
+
+``` javascript
+f.bar // 90
+```
+
+여기서 bar를 삭제하면 Foo 자신의 property의 bar만 삭제가 됩니다.
+그렇기 때문에 다시 로그를 찍으면 prototype의 property의 bar의 값이 로그에 찍히게 됩니다.
+
+``` javascript
+...
+l(f.bar)
+delete f.bar
+l(f.bar)
+```
+결과
+``` javascript
+90
+88
+```
+계속적으로 delete를 사용하여 bar를 삭제해도 자신의 property의 bar가 없는 것으로 삭제 했기에 true가 반환되고, prototype의 property의 bar는 삭제가 되지 않습니다.
+
+``` javascript
+delete f.bar // true 로그 찍힘
+l(f.bar) // 88
+```
+
+## delete and JS built-in static properties
+
+`delete` 연산자는 Array, Math, Object, Date와 같이 JS API의 static built-in property들은 삭제를 할 수 없다.
+
+``` javascript
+l(delete Math.PI)
+```
+결과
+``` javascript
+false
+```
+
+## delete and its holey nature on Arrays
+
+JS의 모든 유형은 JSObject에서 C++에 해당하는 것을 상속합니다. JS의 Objects에서 정의한 각 속성은 C++ JSObject의 맵버 변수 입니다.
+
+``` javascript
+obj = {
+    "d": 90,
+    "f": 88
+}
+JSObject {
+    d -> 90
+    f -> 88
+}
+```
+
+Array의 차이점이라면 JSObject의 key가 정의되어 있지 않다는 것입니다. 그것은 숫자로 되어 있습니다.
+
+``` javascript
+obj = [90, 88]
+JSObject {
+    0: 90
+    1: 88
+}
+```
+그래서 obj[1]과 같이 배열을 참조 합니다. 숫자는 객체에서의 속성과 같습니다.
+
+obj 배열에서는 0과 1의 두가지 속성이 있습니다.
+
+``` javascript
+l(obj[0]) // 90
+l(obj[1]) // 88
+```
+
+delete를 객체에서 했던것 처럼 배열에서도 가능합니다.
+
+아래와 같이 obj의 첫번째 요소를 삭제 합니다.
+
+``` javascript
+delete obj[0]
+```
+이것은 값 90을 삭제 합니다.
+
+``` javascript
+l(oj[0]) // undefined
+```
+하지만 Array의 length는 즐이지 않습니다.
+
+``` javascript
+l(obj.length) // 2
+delete obj[0]
+l(obj.length) // 2
+```
+이것이 배열에 hole을 남김니다.
+
+``` javascript
+// obj
+index:   0   1
+       [   , 88 ]
+```
+
+객체에서도 `delete`연산자는 속성의 값만 제거합니다.
+
+그것과 마찬가지로 배열도 값만 제거 합니다. 
+
+그렇기 때문에 다시 값을 채울수도 있습니다.
+
+``` javascript
+obj[0] = 100
+l(obj[0]) // 100
+```
+
+## Conclusion
+
+`delete`연산자를 알아보면서 `configurable`과 `non-configurable` 요소, `golbal`과 `local scope`, 배열의 `holey`요소등을 알아보았습니다.
