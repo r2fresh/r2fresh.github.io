@@ -4,7 +4,7 @@ date: 2020-01-16 10:05:28 -0400
 categories: jekyll update
 ---
 
-# getElementById vs querySelector 성능 차이
+## getElementById vs querySelector 성능 차이
 
 `getElementById`의 경우 Element의 property인 id의 값만을 이용하여 Element를 찾는 방법이다.
 
