@@ -15,7 +15,7 @@ categories: jekyll update
 ``` javascript
 var el = document.getElementsByClassName('testElement');
 
-var el = document.querySelectorAll('#testElement');
+var el = document.querySelectorAll('.testElement');
 ```
 
 성능의 benchmark의 사이트를 통해 측정을 해본다.
