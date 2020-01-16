@@ -26,7 +26,7 @@ https://www.measurethat.net/
 
 아래는 측정한 결과값이다.
 
-![getElementsByClassName vs querySelectorAll](https://raw.githubusercontent.com/r2fresh/r2fresh.github.io/master/_img/querySelectorAll_vs_%20getElementsByClassName.png)
+![getElementsByClassName vs querySelectorAll](https://raw.githubusercontent.com/r2fresh/r2fresh.github.io/master/_img/querySelectorAll_vs_getElementsByClassName.png)
 
 관련 내용은 아래의 링크를 클릭해도 확인 할 수 있다.
 
