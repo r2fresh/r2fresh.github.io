@@ -26,6 +26,8 @@ https://www.measurethat.net/
 
 아래는 측정한 결과값이다.
 
+![getElementById vs querySelector](https://raw.githubusercontent.com/r2fresh/r2fresh.github.io/master/_img/getElementById_vs_querySelector.png)
+
 관련 내용은 아래의 링크를 클릭해도 확인 할 수 있다.
 
 [https://www.measurethat.net/Benchmarks/ShowResult/89560](https://www.measurethat.net/Benchmarks/ShowResult/89560)
