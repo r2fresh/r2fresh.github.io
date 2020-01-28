@@ -122,6 +122,8 @@ https://caniuse.com/#feat=mdn-api_node_nodevalue
 
 https://www.measurethat.net/Benchmarks/ShowResult/91680
 
+![createTextNode_vs_textContent_vs_innerText_vs_innerHTML_vs_nodeValue](https://raw.githubusercontent.com/r2fresh/r2fresh.github.io/master/_img/createTextNode_vs_textContent_vs_innerText_vs_innerHTML_vs_nodeValue.png)
+
 ## 결과
 
 전체적으로 문자열만을 넣을 경우 IE 브라우저를 신경쓰지 않는다면, nodeValue가 가장 성능이 좋습니다.
