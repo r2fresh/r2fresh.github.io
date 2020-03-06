@@ -1,6 +1,6 @@
 ---
-title: 다른 PC에서 로컬PC Django 웹 접근해서 확인하는 방법.md
-date: 2019-03-06 09:30:28 -0400
+title: 다른 PC에서 로컬PC Django 웹 접근해서 확인하는 방법
+date: 2020-03-06 09:30:28 -0400
 categories: jekyll update
 ---
 
