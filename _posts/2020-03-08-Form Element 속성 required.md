@@ -26,3 +26,6 @@ Node.required = false;
 
 혹시 모르니 항상 Firefox, safari,등의 브라우저도 테스틑를 하자.
 
+### 참고
+
+https://m.blog.naver.com/PostView.nhn?blogId=neo_start&logNo=220302881127&proxyReferer=https%3A%2F%2Fwww.google.com%2F
