@@ -47,17 +47,19 @@ return jsonData
 ```python
 import json
 from django.core.serializers.json import DjangoJSONEncoder
+from django.http import HttpResponse
 
 jsonData = json.dumps(리스트 타입 객체, ensure_ascii=False, cls=DjangoJSONEncoder)
 
-return jsonData;
+return HttpResponse(jsonData);
 ```
 여기서 cls는 `json.JSONEncoder`을 사용해도 되지만 `datetime`으로 parsing의 에러가 발생할수도 있어 Django에서 제공하는 것을 사용한다.
 
-### json.JDONEncoder를 사용하지 않는 방법
+### DjangoJSONEncoder를 사용하지 않는 방법
 ```python
 import json
 import datetime
+from django.http import HttpResponse
 
 def json_default(value): 
     if isinstance(value, datetime.date): 
@@ -66,8 +68,8 @@ def json_default(value):
 
 ...
 
-jsonData = json.dumps(리스트 타입 객체, ensure_ascii=False, cls=json_default)
+jsonData = json.dumps(리스트 타입 객체, ensure_ascii=False, default=json_default)
 
-return jsonData;
+return HttpResponse(jsonData);
 ```
 

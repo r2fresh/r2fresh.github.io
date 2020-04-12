@@ -31,3 +31,7 @@ flex-direction을 column으로 했는데 적용이 되지 않고 Element가 겹�
 ```
 
 결국 중요한 것은 `flex-basis:auto`로 하는 것이다.
+
+**참고사이트**
+
+* https://stackoverflow.com/questions/42764591/flex-direction-column-makes-flex-items-overlap-ie11
