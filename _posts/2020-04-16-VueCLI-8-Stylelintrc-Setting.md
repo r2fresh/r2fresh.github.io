@@ -17,7 +17,7 @@ Vscode에서 VueCLI+Sass+PostCSS+TailwindCSS를 사용시 아래와 같은 경�
 
 Vscode Extension에서 `publisher:"stylelint"`를 검색하여 설치
 
-![스크린샷_2020-04-15_오후_10.38.46](_img/vscode-stylelintrc-setting.png)
+![vscode-stylelintrc-setting](https://raw.githubusercontent.com/r2fresh/r2fresh.github.io/master/_img/vscode-stylelintrc-setting.png?raw=true)
 
 ### Stylelint Config File 추가
 
