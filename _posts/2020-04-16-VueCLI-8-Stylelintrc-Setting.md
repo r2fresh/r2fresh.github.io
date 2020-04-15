@@ -59,3 +59,7 @@ module.exports = {
 ```
 
 ### Vscode를 재실행
+
+### 참고
+
+[https://www.meidev.co/blog/visual-studio-code-css-linting-with-tailwind/](https://www.meidev.co/blog/visual-studio-code-css-linting-with-tailwind/)
