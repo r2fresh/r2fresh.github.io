@@ -186,3 +186,13 @@ prompt_newline() {
 "terminal.integrated.fontSize": 12,
 "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
 ```
+
+## 참고
+
+- https://tutorialpost.apptilus.com/code/posts/tools/using-zsh-oh-my-zsh/
+- https://blog.totu.dev/2016/04/08/zsh2line/
+- https://wayhome25.github.io/etc/2017/03/12/zsh-alias/
+- https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+- https://ohmyz.sh/
+- https://junho85.pe.kr/728
+- https://multifrontgarden.tistory.com/232
