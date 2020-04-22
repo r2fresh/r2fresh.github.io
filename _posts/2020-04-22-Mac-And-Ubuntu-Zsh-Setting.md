@@ -154,6 +154,8 @@ build_prompt() {
 # 멀티라인 적용, 커버모양 변경
 prompt_newline() {
   if [[ -n $CURRENT_BG ]]; then
+  echo -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR
+%(?.%F{$CURRENT_BG}.%F{red})❯%f"
 ```
 
 ### Vscode에서 사용시
