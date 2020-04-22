@@ -138,18 +138,22 @@ ZSH_THEME="agnoster"
 
 ```bash
 # Main prompt
-# build_prompt() {
-#   RETVAL=$?
-#   prompt_status
-#   prompt_virtualenv
-#   prompt_context
-#   prompt_dir
-#   prompt_git
-#   prompt_bzr
-#   prompt_hg
-#   prompt_newline // 멀티라인 적용
-#   prompt_end
-# }
+build_prompt() {
+  RETVAL=$?
+  prompt_status
+  prompt_virtualenv
+  prompt_context
+  prompt_dir
+  prompt_git
+  prompt_bzr
+  prompt_hg
+  prompt_newline # 멀티라인 적용
+  prompt_end
+}
+
+# 멀티라인 적용, 커버모양 변경
+prompt_newline() {
+  if [[ -n $CURRENT_BG ]]; then
 ```
 
 ### Vscode에서 사용시
