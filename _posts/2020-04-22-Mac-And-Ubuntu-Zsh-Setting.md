@@ -137,6 +137,7 @@ ZSH_THEME="agnoster"
 `~/.oh-my-zsh/themes/agnoster.zsh-theme`을 열어 아래의 부분을 수정 추가
 
 ```bash
+{% raw %}
 # Main prompt
 build_prompt() {
   RETVAL=$?
@@ -156,6 +157,7 @@ prompt_newline() {
   if [[ -n $CURRENT_BG ]]; then
   echo -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR
 %(?.%F{$CURRENT_BG}.%F{red})❯%f"
+{% endraw %}
 ```
 
 ### Vscode에서 사용시
