@@ -157,6 +157,14 @@ prompt_newline() {
   if [[ -n $CURRENT_BG ]]; then
   echo -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR
 %(?.%F{$CURRENT_BG}.%F{red})❯%f"
+
+  else
+    echo -n "%{%k%}"
+  fi
+
+  echo -n "%{%f%}"
+  CURRENT_BG=''
+}
 {% endraw %}
 ```
 
