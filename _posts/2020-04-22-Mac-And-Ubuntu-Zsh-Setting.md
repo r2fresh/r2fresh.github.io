@@ -136,36 +136,6 @@ ZSH_THEME="agnoster"
 
 `~/.oh-my-zsh/themes/agnoster.zsh-theme`을 열어 아래의 부분을 수정 추가
 
-```bash
-# Main prompt
-# build_prompt() {
-#   RETVAL=$?
-#   prompt_status
-#   prompt_virtualenv
-#   prompt_context
-#   prompt_dir
-#   prompt_git
-#   prompt_bzr
-#   prompt_hg
-#   prompt_newline // 멀티라인 적용
-#   prompt_end
-# }
-
-# 멀티라인 적용, 커버모양 변경
-prompt_newline() {
-  if [[ -n $CURRENT_BG ]]; then
-    echo -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR
-%(?.%F{$CURRENT_BG}.%F{red})❯%f"
-
-  else
-    echo -n "%{%k%}"
-  fi
-
-  echo -n "%{%f%}"
-  CURRENT_BG=''
-}
-```
-
 ### Vscode에서 사용시
 
 **Mac일 경우**
