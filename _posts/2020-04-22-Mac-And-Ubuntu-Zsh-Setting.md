@@ -14,7 +14,7 @@ categories: jekyll update
 
 # 설치경로 확인
 > which zsh
-#=> /usr/local/bin/zsh
+# => /usr/local/bin/zsh
 
 # 기본 sh 변경
 > chsh -s $(which zsh)
@@ -147,7 +147,7 @@ build_prompt() {
   prompt_git
   prompt_bzr
   prompt_hg
-  prompt_newline # 멀티라인 적용
+  prompt_newline // 멀티라인 적용
   prompt_end
 }
 
