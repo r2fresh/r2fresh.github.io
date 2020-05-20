@@ -23,3 +23,7 @@ module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "./" : "",
 };
 ```
+
+## 참고
+
+- https://cli.vuejs.org/config/#publicpath
